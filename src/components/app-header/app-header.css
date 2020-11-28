@@ -1,0 +1,13 @@
+.app-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.app-header .card-body {
+    padding: 10px;
+}
+.app-header .card {
+    width: 190px;
+    height: 100px;
+}
+

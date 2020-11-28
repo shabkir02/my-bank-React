@@ -1,0 +1,9 @@
+.todo-app {
+    margin: 1rem auto 0;
+    width: 400px;
+    text-align: center;
+}
+
+li {
+    list-style-type: none;
+}
