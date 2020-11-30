@@ -1,28 +1,26 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 import './items-list.css';
 import EveryItem from '../every-item';
 
-export default class ItemsList extends Component {
+const ItemsList = ({money, onDeleted}) => {
 
-    render() {
-        const {money, onDeleted} = this.props;
-
-        const elements = money.map(item => {
-            const {id, ...itemProps} = item;
-            return (
-                <li key={id}>
-                    <EveryItem
-                        {...itemProps}
-                        onDeleted={() => onDeleted(id)} />
-                </li>
-            )
-        })
-
+    const elements = money.map(item => {
+        const {id, ...itemProps} = item;
         return (
-            <ul className="items-list">
-                {elements}
-            </ul>
+            <li key={id}>
+                <EveryItem
+                    {...itemProps}
+                    onDeleted={() => onDeleted(id)} />
+            </li>
         )
-    }
+    })
+
+    return (
+        <ul className="items-list">
+            {elements}
+        </ul>
+    )
 }
+
+export default ItemsList;
