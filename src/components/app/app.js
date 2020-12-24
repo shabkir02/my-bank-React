@@ -47,7 +47,7 @@ export default class App extends Component {
           }
     }
 
-    addItemPlus = (value) => {
+    onAddedPlus = (value) => {
         const newItem = {
             value,
             plus: true,
@@ -62,7 +62,7 @@ export default class App extends Component {
         });
     }
 
-    addItemMinus = (value) => {
+    onAddedMinus = (value) => {
         const newItem = {
             value,
             plus: false,
@@ -99,8 +99,8 @@ export default class App extends Component {
                     calcPlus={countPlus}
                     calcMinus={countMinus} />
                 <ItemAddForm 
-                    onAddedPlus={this.addItemPlus}
-                    onAddedMinus={this.addItemMinus} />
+                    onAddedPlus={this.onAddedPlus}
+                    onAddedMinus={this.onAddedMinus} />
                 <ItemsList 
                     money={money}
                     onDeleted={this.onDeleted}/>
